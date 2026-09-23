@@ -159,7 +159,7 @@ def chopper_set(angle):
 
 def receiver_set(f):
     # Reuse your cmd() with socketType='UDP'
-    return cmd(receiver, f"{f:.1f}\n".encode(), socketType='UDP')
+    return cmd(receiver, f"{f:.6f}\n".encode(), socketType='UDP')
 
 def gyro_start_continuous():
     return cmd(gyro, b"START\n", socketType='UDP')
