@@ -1,0 +1,129 @@
+pmc.connect() #Nach dem Start und nach dem Wechsel von GUI/Labview auf Python immer wieder den pmc.connect() Befehl ausführen.
+
+pmc.setup_pmcc(pmc_backend.load('config/allregs.bin'), bandwidth='2GHz',int_time_ms=500)  #Standard Einstellungen laden
+
+pmc.readReg(0)	#Check der Verbindung. Sollte 6 ausgeben
+
+plothist(pmc.readADC()) #ADC Auslastung testen. Sollt Gauß Verteilung von 0-60 ergeben.
+
+save(pmc.readAll(),'test.bin') #register auslesen und in Datei Speichern, wenn man gute Einstellungen gefunden hat.
+
+d,t=pmc.meas_spectra(5) #Hier 5 Spektren
+plot_spectrum(d,bandwidth = 4)
+t	#absolute Zeit Messdaten
+dt(t)	#relative Messzeit (Die benutzt man eher)
+
+
+
+==================================================
+Fehler RaspberryPi
+==================================================
+
+Script muss mit sudo rechten ausgeführt werden. 
+Also entweder in bash mit cd in den Ordner. Dann my sudo python3 ausführen und
+direkt in python öffnen exec(open('pmc_backend3_Martin.py').read()).
+Oder z.B. thonny mit sudo öffnen.
+
+
+Zuerst pmc_backend ausführen damit die Befehle funktionieren.
+pmc_udpserver ausführen im Labview zu benutzen.
+
+
+
+Fehler:
+Man kann connecten, aber sobald man das Spektrometer initialisiert kommt der Fehler
+"""
+pmc.setupPMCC(load('allregs.bin'), bandwidth='2GHz',int_time_ms=500) 
+b"This handle hasn't been activated yet"
+Traceback (most recent call last):
+  File "<pyshell>", line 1, in <module>
+  File "/home/pi/Documents/PythonProjects/Pacific_MicroChip_EVAL2_PCB/python/pmc_backend_v4_Lukas.py", line 273, in setupPMCC
+    if self.readReg(0)!=6: raise Exception('setupPMCC: connection error')
+  File "/home/pi/Documents/PythonProjects/Pacific_MicroChip_EVAL2_PCB/python/pmc_backend_v4_Lukas.py", line 183, in readReg
+    buf=self._readReg(reg,1)
+  File "/home/pi/Documents/PythonProjects/Pacific_MicroChip_EVAL2_PCB/python/pmc_backend_v4_Lukas.py", line 177, in _readReg
+    buf=sendread_packet(self.pd,seq)
+  File "/home/pi/Documents/PythonProjects/Pacific_MicroChip_EVAL2_PCB/python/pmc_backend_v4_Lukas.py", line 61, in sendread_packet
+    buf=read_next(pd)
+  File "/home/pi/Documents/PythonProjects/Pacific_MicroChip_EVAL2_PCB/python/pmc_backend_v4_Lukas.py", line 43, in read_next
+    if perr!=b'': print(perr); raise Exception('read next: perr')
+Exception: read next: perr
+"""
+
+Lösung:
+Connect Befehl war nicht erfolgreich, was man an 
+"setnonblock: -3" sieht. -1 is a general failure code for libpcap, but -3 usually means invalid handle or unactivated handle.
+
+In "def connect" muss erst "pcap.activate(self.pd)" und dann "pcap.setnonblock(self.pd,1, self.ebuf)" gesetzt werden. Das war einfach die Reihenfolge falsch.
+
+
+
+
+
+
+==================================================
+Fehler allgemein
+==================================================
+Wenn <-: b'INIT 2GHz 500'
+cannot execute command: sendread_packet: timeout, Data:False
+Spektrometer neustarten
+
+val=pmc.readReg(336)&0b110
+list(BANDWIDTH.keys())[list(BANDWIDTH.values()).index(pmc.readReg(336)&0b11)]
+
+==================================================
+Noch in Arbeit
+==================================================
+with open('your_file.txt', 'w') as f:
+    for line in adc:
+        f.write(f"{line}\n")
+
+
+
+
+for i in range(1):
+	d,t=pmc.measSpectra(1)
+	y=dt(t)
+	for x in range(len(y)):
+    		print("%.2f" % y[x])
+==================================================
+Als CSV speichern:
+np.savetxt('data.csv', (col1_array, col2_array, col3_array), delimiter=',')
+        np.savetxt('E:\Messungen\2024_05_03_Compact_Spectrometer\test.csv', (1233, 123,123), delimiter=',')
+
+
+
+
+ADC auslesen
+a=pmc.readADC()
+hist,_=np.histogram(adcm,bins=32,range=(0,63)) #_ ist einfach ne Variable, die nie verwendet wird. Daher wird der zweite returnvalue irgnoriert.
+20
+
+Bem.:
+a=pmc.readADC()
+len(a)=20
+len(a[0])=1024
+adcm=sum(a,[]) #also 1 1D arrays, wobei jedes Element ein 2D Array ist.
+len(adcm) = 20480
+
+
+fn="ADC_ E:\\Messungen\\2024_05_03_Compact_Spectrometer\\20240617_Testing_python_Interface".split(' ')
+datetime=time.strftime("%Y%m%d%H%M%S", time.localtime(time.time()))
+fn=params[1]+ "\\" +  f'{datetime}' + 'ADC.csv'
+pmc.saveADC(fn)
+
+
+
+
+
+
+
+
+
+1GHz: 0b101010001000&110
+2GHz. 0b101010001010&
+4GHz: 0b101010001100&
+8GHz: 0b101010001110&
+
+
+

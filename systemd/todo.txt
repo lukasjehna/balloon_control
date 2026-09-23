@@ -1,0 +1,7 @@
+sudo systemctl daemon-reload
+sudo systemctl restart balloon-udp-spectrometer.service
+sudo systemctl status balloon-udp-spectrometer.service
+
+change data files
+sudo chown -R root:pi /home/pi/projects/balloon_mission/logs
+sudo chmod -R g+rwX /home/pi/projects/balloon_mission/logs

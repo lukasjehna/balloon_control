@@ -1,0 +1,26 @@
+# /etc/systemd/system/balloon-udp-spectrometer.service
+[Unit]
+Description=Balloon spectrometer UDP server (root)
+After=network-online.target
+Wants=network-online.target
+PartOf=balloon-main.service
+
+[Service]
+Type=notify
+NotifyAccess=main 
+User=root
+Group=pi
+UMask=0002
+WorkingDirectory=/home/pi/projects/balloon_mission
+ExecStart=/usr/bin/python3 /home/pi/projects/balloon_mission/src/udp/spectrometer_udp_server.py
+Restart=on-failure
+RestartSec=2
+TimeoutStopSec=5s
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=balloon-spectrometer
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
+

@@ -1,0 +1,42 @@
+sudo systemctl daemon-reload when chaning service files.
+Then systemclt restart <service>
+
+
+In the main service, make sure to use python3 -u for unflushed prints to get a continiuous output. Otherwise I will only get printed after exectution finishes.
+you can also use run_services to start the measurement now or enable measurements on startup.
+The manual setup for this is explained in the following:
+sudo systemctl start balloon-main.service
+
+## Use Autostart
+# Add these services under /etc/systemd/system/<balloon-chopper-udp.service> 
+sudo systemctl daemon-reload
+
+# optional: enable all UDP servers individually
+sudo systemctl enable balloon-chopper-udp.service \
+                     balloon-pressure-udp.service \
+                     balloon-temperature-udp.service \
+                     balloon-gyro-udp.service \
+                     balloon-receiver-udp.service \
+                     balloon-spectrometer-udp.service
+
+# enable: to start on bootup, start: start it right now.
+sudo systemctl enable balloon-main.service
+sudo systemctl start balloon-main.service
+
+# check status
+systemctl status balloon-main.service
+systemctl status balloon-chopper-udp.services
+
+#Systemd explained
+Three main sections:
+[Unit], [Service] and [Install]
+After: starts [Service] only after these services are running
+Wants:  starts services, but failure has no impact on the main service.
+## stopps, restarts if main does
+PartOf=balloon-main.service
+[Service}
+
+
+[Install]
+## this service starts on startup
+WantedBy=multi-user.target

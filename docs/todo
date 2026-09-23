@@ -1,0 +1,86 @@
+# Balloon Mission TODO
+
+Short description of current focus and context for this project.
+
+## Conventions
+
+- Use `- [ ]` for open tasks and `- [x]` for done tasks.
+- Prefix tasks with component tags like `[main]`, `[spectrometer]`, `[pressure]`, `[gyro]`, `[temp]`, `[infra]`, `[editor]`, `[bash]`.
+- Optional metadata at the end: `@you yyyy-mm-dd ~estimate`.
+
+---
+
+## High Priority (Next 1–2 Days)
+
+- [ ] [main] Create timestamped folder with header file and save `.spec` files with appropriate names for hot/cold measurements.  
+Errors are not cleary shown when running the service.sh. When the spectrometer was not connected it didnt shrow any error and did't save spectra. But the other programs worked.
+- [ ] [spectrometer] the header should show the number of spectra per hot cold file. It currently shows the spectra per iteration.  
+ 
+
+---
+## shell scripts:
+
+-[run_python_measurement.py] closing files does not work anyway and you have them kill them with ./kill_all.sh. So you can remove that part and kall kill all.
+## main.py / Measurement Logic
+
+
+- [ ] [main] Stopping during the gas spectroscopy does not stop. Exit also just locks. 
+- [ ] [main] Factor out parser into its own function to keep `main.py` modular and easier to test.  
+- [ ] [main] Add quick-readout function / command for fast testing of one device (e.g. single spectrum or single sensor read).  
+
+###UDP
+-add 
+def shutdown(signum, fram):
+    server.shutdown()
+    server.server_close()
+
+## Device Code (src/)
+
+- [ ] [spectrometer] Ensure spectrometer backend and UDP server use the new folder + header + `.spec` naming scheme consistently. Check in the spectrometer handler if the len(args) has the correct values. Make sure that connect makes a connection check. It currenly also works if the spectrometer is not connected. It probably only opens a connection from the computer. 
+- [ ] [pressure] Verify pressure UDP server follows the agreed message format and integrate with quick-readout path.  
+- [ ] [gyro] Add basic calibration / sanity-check routine callable over UDP.  
+- [ ] [temp] Implement simple averaging over N samples before returning temperature.  
+
+-[] [background measurement]they have a measurement interval of 1.0 s even though i set i to 10 s. find out why.
+---
+
+## Infrastructure / System
+
+- [ ] [infra] Test all systemd units and services: verify UDP servers start before `main.py`, restart behavior, and logging.  
+- [ ] [infra] Add a short note in `docs/` on how to enable/disable and inspect these units on the Pi.  
+
+---
+
+## Editor / Workflow
+
+- [ ] [editor] Define Vim marks/bookmarks for key files and sections (e.g. `main.py`, each `*_udp_server.py`, systemd unit paths).  
+- [ ] [editor] Optionally store a short cheatsheet in `docs/vim_marks.md` for future reference.  
+
+---
+
+## Bash Helpers
+
+- [ ] [bash] Create `~/bin/go` helper to jump to bookmarked project directories and start an interactive shell.  
+- [ ] [bash] Extend `go` script with more bookmarks (e.g. `balloon`, `dotfiles`, other measurement projects).  
+
+Example `bin/go` script:
+
+modularize all functions and let each create a data file in the appropiate folder.
+
+
+systemd for chopper:
+[Unit]
+Description=Chopper UDP Server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/pi/src/chopper_udp_server.py --port 5126 --pin 12
+WorkingDirectory=/home/pi/src
+User=pi
+Group=pi
+Restart=on-failure
+RestartSec=2s
+
+[Install]
+WantedBy=multi-user.target

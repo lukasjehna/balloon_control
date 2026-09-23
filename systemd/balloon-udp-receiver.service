@@ -1,0 +1,22 @@
+[Unit]
+Description=Balloon UDP server receiver
+After=network-online.target
+Wants=network-online.target
+PartOf=balloon-main.service
+
+[Service]
+Type=simple
+User=pi
+Group=pi
+WorkingDirectory=/home/pi/projects/balloon_mission
+ExecStart=/usr/bin/python3 /home/pi/projects/balloon_mission/src/udp/receiver_udp_server.py
+Restart=on-failure
+RestartSec=2
+TimeoutStopSec=5s
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=balloon-receiver
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

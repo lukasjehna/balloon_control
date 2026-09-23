@@ -1,0 +1,11 @@
+python test.
+Check if .spec file has a header
+check if time between spec files it between 12 and 14 seconds
+check if the number of hot cold files is congruent with the header file.
+
+sudo journalctl -u balloon-udp@chopper.service
+sudo journalctl -u balloon-udp-spectrometer.service -b
+sudo journalctl -u balloon-main.service
+sudo journalctl -u balloon-main.service -f
+sudo journalctl -u balloon-main.service --since "10 min ago"
+sudo journalctl -u balloon-main.service --no-pager

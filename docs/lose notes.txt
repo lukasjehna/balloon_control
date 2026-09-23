@@ -1,0 +1,43 @@
+number of removed Spikes doesnt make sense, make sure that the despike only works in the 
+are th
+area where you average. That probably makes mores sense
+
+calculate the "bandwidth" Where the noise temperature is under 20000
+
+The averaging should 
+calculat the difference between the rx frequecy and f_s frequeny and create the average for the Points with 300 MHz around it.
+
+calculate the closest bin to the position of the enter_freq_ghz. Then set the default for bin start and bin stop to be 615 bins below/Above the closted bin to the Center frequency. But restrict bin start and bin stop to allowed bin Limit from 0 to 8191.
+
+
+
+if bin start and bin stop are Default calculat them to be 615 bins below/Above the Center frequeny
+
+BIN_START= 615*bw/8192
+BIN_STOP= 615*bw/8192
+
+round(abs(f_s-f_rx))8192/bw
+
+   parser.add_argument("--bin-start", type=int, default=200, help="Start bin (inclusive) for mean.")
+    parser.add_argument("--bin-stop", type=int, default=1850, help="Stop bin (inclusive) for mean.")
+
+
+Adapt the despike and the noise temperature average in an invertall of 1230 bins around the c.  center_freq_ghz
+
+Add Center frequeny as argparse.
+
+how to init spectrometer when error is created. 
+Header should also have a timestamp
+
+check def _ts():
+    return datetime.now().strftime("%Y%m%d%H%M%S")
+
+
+
+Wrap each spectrometer_hot_cold() call in a try-except block
+On error, print the error message, reinitialize the spectrometer with spectrometer_init(), wait for settle time, and retry
+If the retry also fails, print a message and continue to skip to the next cycle
+The loop continues normally if either the first attempt or the retry
+
+
+check error handling and logging.

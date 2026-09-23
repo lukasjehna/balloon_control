@@ -1,0 +1,8 @@
+#Check udp servers
+echo "90" | nc -u -w1  127.0.0.1 5001  
+kill udp process:
+ps aux | grep chopper_udp_server.py 
+This is supposed to be better because grep doesnt count itself:
+ps -fC python3
+
+take first number and kill -9 <PID>

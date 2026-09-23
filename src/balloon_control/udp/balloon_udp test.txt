@@ -1,0 +1,12 @@
+echo -e "READ\n" | nc -u 127.0.0.1 5003   # One-shot reading
+echo -e "START\n" | nc -u 127.0.0.1 5003  # Continuous logging
+echo -e "STOP\n" | nc -u 127.0.0.1 5003   # Stop
+
+
+echo -e "READ\n" | nc -u 127.0.0.1 5006
+echo -e "START\n" | nc -u 127.0.0.1 5006  # Background CSV
+echo -e "STOP\n" | nc -u 127.0.0.1 5006
+
+echo -e "READ\n" | nc -u 127.0.0.1 5004
+echo -e "START\n" | nc -u 127.0.0.1 5004
+echo -e "STOP\n" | nc -u 127.0.0.1 5004

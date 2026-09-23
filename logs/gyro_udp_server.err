@@ -1,0 +1,240 @@
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 108, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 88, in main
+    init_sensor(bus_number=args.bus, address=args.address)
+  File "/home/pi/projects/balloon_mission/src/gyro_sensor.py", line 29, in init_sensor
+    _bus.write_byte_data(address, POWER_MGMT_1, 0)
+OSError: [Errno 121] Remote I/O error
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 108, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 88, in main
+    init_sensor(bus_number=args.bus, address=args.address)
+  File "/home/pi/projects/balloon_mission/src/gyro_sensor.py", line 29, in init_sensor
+    _bus.write_byte_data(address, POWER_MGMT_1, 0)
+OSError: [Errno 121] Remote I/O error
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 108, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 88, in main
+    init_sensor(bus_number=args.bus, address=args.address)
+  File "/home/pi/projects/balloon_mission/src/gyro_sensor.py", line 29, in init_sensor
+    _bus.write_byte_data(address, POWER_MGMT_1, 0)
+OSError: [Errno 121] Remote I/O error
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 108, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 88, in main
+    init_sensor(bus_number=args.bus, address=args.address)
+  File "/home/pi/projects/balloon_mission/src/gyro_sensor.py", line 29, in init_sensor
+    _bus.write_byte_data(address, POWER_MGMT_1, 0)
+OSError: [Errno 121] Remote I/O error
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 108, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 88, in main
+    init_sensor(bus_number=args.bus, address=args.address)
+  File "/home/pi/projects/balloon_mission/src/gyro_sensor.py", line 29, in init_sensor
+    _bus.write_byte_data(address, POWER_MGMT_1, 0)
+OSError: [Errno 121] Remote I/O error
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 108, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 88, in main
+    init_sensor(bus_number=args.bus, address=args.address)
+  File "/home/pi/projects/balloon_mission/src/gyro_sensor.py", line 29, in init_sensor
+    _bus.write_byte_data(address, POWER_MGMT_1, 0)
+OSError: [Errno 121] Remote I/O error
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 108, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 88, in main
+    init_sensor(bus_number=args.bus, address=args.address)
+  File "/home/pi/projects/balloon_mission/src/gyro_sensor.py", line 29, in init_sensor
+    _bus.write_byte_data(address, POWER_MGMT_1, 0)
+OSError: [Errno 121] Remote I/O error
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 108, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 88, in main
+    init_sensor(bus_number=args.bus, address=args.address)
+  File "/home/pi/projects/balloon_mission/src/gyro_sensor.py", line 29, in init_sensor
+    _bus.write_byte_data(address, POWER_MGMT_1, 0)
+OSError: [Errno 121] Remote I/O error
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 108, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 88, in main
+    init_sensor(bus_number=args.bus, address=args.address)
+  File "/home/pi/projects/balloon_mission/src/gyro_sensor.py", line 29, in init_sensor
+    _bus.write_byte_data(address, POWER_MGMT_1, 0)
+OSError: [Errno 121] Remote I/O error
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 108, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 88, in main
+    init_sensor(bus_number=args.bus, address=args.address)
+  File "/home/pi/projects/balloon_mission/src/gyro_sensor.py", line 29, in init_sensor
+    _bus.write_byte_data(address, POWER_MGMT_1, 0)
+OSError: [Errno 121] Remote I/O error
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 108, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 88, in main
+    init_sensor(bus_number=args.bus, address=args.address)
+  File "/home/pi/projects/balloon_mission/src/gyro_sensor.py", line 29, in init_sensor
+    _bus.write_byte_data(address, POWER_MGMT_1, 0)
+OSError: [Errno 121] Remote I/O error
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 108, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 88, in main
+    init_sensor(bus_number=args.bus, address=args.address)
+  File "/home/pi/projects/balloon_mission/src/gyro_sensor.py", line 29, in init_sensor
+    _bus.write_byte_data(address, POWER_MGMT_1, 0)
+OSError: [Errno 121] Remote I/O error
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 108, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 88, in main
+    init_sensor(bus_number=args.bus, address=args.address)
+  File "/home/pi/projects/balloon_mission/src/gyro_sensor.py", line 29, in init_sensor
+    _bus.write_byte_data(address, POWER_MGMT_1, 0)
+OSError: [Errno 121] Remote I/O error
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 108, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 88, in main
+    init_sensor(bus_number=args.bus, address=args.address)
+  File "/home/pi/projects/balloon_mission/src/gyro_sensor.py", line 29, in init_sensor
+    _bus.write_byte_data(address, POWER_MGMT_1, 0)
+OSError: [Errno 121] Remote I/O error
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 108, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 88, in main
+    init_sensor(bus_number=args.bus, address=args.address)
+  File "/home/pi/projects/balloon_mission/src/gyro_sensor.py", line 29, in init_sensor
+    _bus.write_byte_data(address, POWER_MGMT_1, 0)
+OSError: [Errno 121] Remote I/O error
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 108, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 88, in main
+    init_sensor(bus_number=args.bus, address=args.address)
+  File "/home/pi/projects/balloon_mission/src/gyro_sensor.py", line 29, in init_sensor
+    _bus.write_byte_data(address, POWER_MGMT_1, 0)
+OSError: [Errno 121] Remote I/O error
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 108, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 88, in main
+    init_sensor(bus_number=args.bus, address=args.address)
+  File "/home/pi/projects/balloon_mission/src/gyro_sensor.py", line 29, in init_sensor
+    _bus.write_byte_data(address, POWER_MGMT_1, 0)
+OSError: [Errno 121] Remote I/O error
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 108, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 88, in main
+    init_sensor(bus_number=args.bus, address=args.address)
+  File "/home/pi/projects/balloon_mission/src/gyro_sensor.py", line 29, in init_sensor
+    _bus.write_byte_data(address, POWER_MGMT_1, 0)
+OSError: [Errno 121] Remote I/O error
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 108, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 88, in main
+    init_sensor(bus_number=args.bus, address=args.address)
+  File "/home/pi/projects/balloon_mission/src/gyro_sensor.py", line 29, in init_sensor
+    _bus.write_byte_data(address, POWER_MGMT_1, 0)
+OSError: [Errno 121] Remote I/O error
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 108, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 88, in main
+    init_sensor(bus_number=args.bus, address=args.address)
+  File "/home/pi/projects/balloon_mission/src/gyro_sensor.py", line 29, in init_sensor
+    _bus.write_byte_data(address, POWER_MGMT_1, 0)
+OSError: [Errno 121] Remote I/O error
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 108, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 88, in main
+    init_sensor(bus_number=args.bus, address=args.address)
+  File "/home/pi/projects/balloon_mission/src/gyro_sensor.py", line 29, in init_sensor
+    _bus.write_byte_data(address, POWER_MGMT_1, 0)
+OSError: [Errno 121] Remote I/O error
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 108, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 88, in main
+    init_sensor(bus_number=args.bus, address=args.address)
+  File "/home/pi/projects/balloon_mission/src/gyro_sensor.py", line 29, in init_sensor
+    _bus.write_byte_data(address, POWER_MGMT_1, 0)
+OSError: [Errno 121] Remote I/O error
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 108, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 88, in main
+    init_sensor(bus_number=args.bus, address=args.address)
+  File "/home/pi/projects/balloon_mission/src/gyro_sensor.py", line 29, in init_sensor
+    _bus.write_byte_data(address, POWER_MGMT_1, 0)
+OSError: [Errno 121] Remote I/O error
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 108, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 88, in main
+    init_sensor(bus_number=args.bus, address=args.address)
+  File "/home/pi/projects/balloon_mission/src/gyro_sensor.py", line 29, in init_sensor
+    _bus.write_byte_data(address, POWER_MGMT_1, 0)
+OSError: [Errno 121] Remote I/O error
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 108, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 88, in main
+    init_sensor(bus_number=args.bus, address=args.address)
+  File "/home/pi/projects/balloon_mission/src/gyro_sensor.py", line 29, in init_sensor
+    _bus.write_byte_data(address, POWER_MGMT_1, 0)
+OSError: [Errno 121] Remote I/O error
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 108, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 88, in main
+    init_sensor(bus_number=args.bus, address=args.address)
+  File "/home/pi/projects/balloon_mission/src/gyro_sensor.py", line 29, in init_sensor
+    _bus.write_byte_data(address, POWER_MGMT_1, 0)
+OSError: [Errno 121] Remote I/O error
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 108, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 88, in main
+    init_sensor(bus_number=args.bus, address=args.address)
+  File "/home/pi/projects/balloon_mission/src/gyro_sensor.py", line 29, in init_sensor
+    _bus.write_byte_data(address, POWER_MGMT_1, 0)
+OSError: [Errno 121] Remote I/O error
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 108, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 88, in main
+    init_sensor(bus_number=args.bus, address=args.address)
+  File "/home/pi/projects/balloon_mission/src/gyro_sensor.py", line 29, in init_sensor
+    _bus.write_byte_data(address, POWER_MGMT_1, 0)
+OSError: [Errno 121] Remote I/O error
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 108, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 88, in main
+    init_sensor(bus_number=args.bus, address=args.address)
+  File "/home/pi/projects/balloon_mission/src/gyro_sensor.py", line 29, in init_sensor
+    _bus.write_byte_data(address, POWER_MGMT_1, 0)
+OSError: [Errno 121] Remote I/O error
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 108, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/gyro_udp_server.py", line 88, in main
+    init_sensor(bus_number=args.bus, address=args.address)
+  File "/home/pi/projects/balloon_mission/src/gyro_sensor.py", line 29, in init_sensor
+    _bus.write_byte_data(address, POWER_MGMT_1, 0)
+OSError: [Errno 121] Remote I/O error

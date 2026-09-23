@@ -1,0 +1,842 @@
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, 0) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, 0) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, 0) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, 0) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, 0) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, 0) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, 0) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+/home/pi/projects/balloon_mission/src/chopper_control.py:19: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
+  GPIO.setup(pin, GPIO.OUT) #define pin as out
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 81, in <module>
+    main()
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 64, in main
+    servo = ServoController(pin=args.pin, freq=args.freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 25, in __init__
+    self.pwm = init_servo(pin=pin, freq=freq)
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 20, in init_servo
+    pwm = GPIO.PWM(pin, PWM_FREQ) # GPIO 12 als PWM mit 50Hz
+ValueError: frequency must be greater than 0.0
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 12, in <module>
+    from chopper_control import (
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 36
+    def move_smooth(target_angle,current_angle=current_angle, pwm, step=1, delay=0.04):
+                   ^
+SyntaxError: non-default argument follows default argument
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 12, in <module>
+    from chopper_control import (
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 36
+    def move_smooth(target_angle,current_angle=current_angle, pwm, step=1, delay=0.04):
+                   ^
+SyntaxError: non-default argument follows default argument
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 12, in <module>
+    from chopper_control import (
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 36
+    def move_smooth(target_angle,current_angle=current_angle, pwm, step=1, delay=0.04):
+                   ^
+SyntaxError: non-default argument follows default argument
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 12, in <module>
+    from chopper_control import (
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 36
+    def move_smooth(target_angle,current_angle=current_angle, pwm, step=1, delay=0.04):
+                   ^
+SyntaxError: non-default argument follows default argument
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 12, in <module>
+    from chopper_control import (
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 36
+    def move_smooth(target_angle,current_angle=current_angle, pwm, step=1, delay=0.04):
+                   ^
+SyntaxError: non-default argument follows default argument
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 12, in <module>
+    from chopper_control import (
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 36
+    def move_smooth(target_angle,current_angle=current_angle, pwm, step=1, delay=0.04):
+                   ^
+SyntaxError: non-default argument follows default argument
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 12, in <module>
+    from chopper_control import (
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 36
+    def move_smooth(target_angle,current_angle=current_angle, pwm, step=1, delay=0.04):
+                   ^
+SyntaxError: non-default argument follows default argument
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 12, in <module>
+    from chopper_control import (
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 36
+    def move_smooth(target_angle,current_angle=current_angle, pwm, step=1, delay=0.04):
+                   ^
+SyntaxError: non-default argument follows default argument
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 12, in <module>
+    from chopper_control import (
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 36
+    def move_smooth(target_angle,current_angle=current_angle, pwm, step=1, delay=0.04):
+                   ^
+SyntaxError: non-default argument follows default argument
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 12, in <module>
+    from chopper_control import (
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 36
+    def move_smooth(target_angle,current_angle=current_angle, pwm, step=1, delay=0.04):
+                   ^
+SyntaxError: non-default argument follows default argument
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 12, in <module>
+    from chopper_control import (
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 36
+    def move_smooth(target_angle,current_angle=current_angle, pwm, step=1, delay=0.04):
+                   ^
+SyntaxError: non-default argument follows default argument
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 12, in <module>
+    from chopper_control import (
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 36
+    def move_smooth(target_angle,current_angle=current_angle, pwm, step=1, delay=0.04):
+                   ^
+SyntaxError: non-default argument follows default argument
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 12, in <module>
+    from chopper_control import (
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 36
+    def move_smooth(target_angle,current_angle=current_angle, pwm, step=1, delay=0.04):
+                   ^
+SyntaxError: non-default argument follows default argument
+Traceback (most recent call last):
+  File "/home/pi/projects/balloon_mission/src/chopper_udp_server.py", line 12, in <module>
+    from chopper_control import (
+  File "/home/pi/projects/balloon_mission/src/chopper_control.py", line 36
+    def move_smooth(target_angle,current_angle=current_angle, pwm, step=1, delay=0.04):
+                   ^
+SyntaxError: non-default argument follows default argument

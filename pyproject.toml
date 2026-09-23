@@ -1,0 +1,17 @@
+[project]
+name = "balloon-control"
+version = "0.1.0"
+description = "Control software for the balloon"
+readme = "README.md"
+authors = [
+    { name = "Lukas Jehna", email = "lukasjehna@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+balloon-control = "balloon_control:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"

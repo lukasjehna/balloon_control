@@ -1,0 +1,9 @@
+Different ideas to optimize the system boot up time and powerconsumption and staility. 
+
+1. GUI vs CLI
+Using systemd-analyze time to measure the bootup time 10 times to compare the average with and without GUI
+
+2. Disable Services
+2.1 disable audio by uncommenting
+# Enable audio (loads snd_bcm2835)
+tparam=audio=on

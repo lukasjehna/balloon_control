@@ -1,0 +1,32 @@
+[Unit]
+Description=Balloon mission main controller
+After=network.target \
+      balloon-udp-chopper.service \
+      balloon-udp-pressure.service \
+      balloon-udp-temperature.service \
+      balloon-udp-receiver.service \
+      balloon-udp-gyro.service \
+      balloon-udp-telemetry.service \
+      balloon-udp-spectrometer.service
+Wants=balloon-udp-chopper.service \
+      balloon-udp-pressure.service \
+      balloon-udp-temperature.service \
+      balloon-udp-receiver.service \
+      balloon-udp-gyro.service \
+      balloon-udp-telemetry.service \
+      balloon-udp-spectrometer.service
+
+[Service]
+Type=simple
+User=pi
+Group=pi
+WorkingDirectory=/home/pi/projects/balloon_mission
+ExecStart=/usr/bin/python3 -u /home/pi/projects/balloon_mission/main.py --spectrometer --led --f-rx-ghz 235.983
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=balloon-main
+Environment=PYTHONUNBUFFERED=1
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

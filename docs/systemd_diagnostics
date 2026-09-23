@@ -1,0 +1,3 @@
+systemctl list-units 'balloon-udp@*.service'
+systemctl status balloon-udp@telemetry.service
+systemctl --no-pager status balloon-udp@telemetry.service 
