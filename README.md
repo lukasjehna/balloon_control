@@ -12,7 +12,7 @@
 ## start a full measurement
 ./script/run_service 
 ## analysis
-uv run python -m src.balloon.analysis.noise_temperature_folder_viewer --thot 300 --tcold 5 --pairs-per-average 30 --spectral-bin-size 3
+uv run src/balloon/analysis/noise_temperature_folder_viewer.py --thot 300 --tcold 5 --pairs-per-average 30 --spectral-bin-size 3
 
 # Documentation
 - systemd and service managment -> docs/systemd.md
