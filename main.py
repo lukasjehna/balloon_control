@@ -1,13 +1,16 @@
-import socket
-import time
-import os
-import sys
-import signal
-import json
 import argparse
+import json
+import os
+import signal
+import socket
+import sys
+import time
+
 import numpy as np
+
 sys.path.append(os.path.join(os.path.dirname(__file__), 'src')) # Add src/ to path
-from devices import led_control
+from balloon_control.devices import led_control
+
 os.umask(0o000) #no default restriction for files
 
 chopper=5001
@@ -111,7 +114,7 @@ def cmd(port, command, ip=IP, noansw=0, answerTerminated=True, packetlen=1024,
                                 f"cmd='{cmd_preview}', received={answ!r}"
                             )
                         answ += data
-                    except socket.timeout as exc:
+                    except TimeoutError as exc:
                         raise UdpCommandError(
                             f"incomplete terminated reply from {pname}({port}) "
                             f"cmd='{cmd_preview}', received={answ!r}"
@@ -123,10 +126,10 @@ def cmd(port, command, ip=IP, noansw=0, answerTerminated=True, packetlen=1024,
                         if not data:
                             break
                         answ += data
-                    except socket.timeout:
+                    except TimeoutError:
                         break
 
-        except socket.timeout as exc:
+        except TimeoutError as exc:
             raise UdpCommandError(
                 f"socket timeout on {pname}({port}) cmd='{cmd_preview}', received={answ!r}"
             ) from exc

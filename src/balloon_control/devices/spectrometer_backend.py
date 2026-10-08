@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 import ctypes as ct
-import time
-import libpcap as pcap
 import struct
-import numpy as np
+import time
 from pathlib import Path
+
+import libpcap as pcap
+import numpy as np
 
 # pcap.config(LIBPCAP="npcap")
 
@@ -66,7 +67,7 @@ def load(filename):
 
 def load_window_coefficients(filename):
     with open(filename, 'r') as f:
-        coefficients = [int(row) for row in f.readlines()]
+        coefficients = [int(row) for row in f]
     return coefficients
 
 
@@ -249,17 +250,17 @@ class PmcBackend:
         return int.from_bytes(buf, byteorder='big')
 
     def read_all(self):
-        self.regs = [self.read_reg(i) for i in range(0, 512)]
+        self.regs = [self.read_reg(i) for i in range(512)]
         return self.regs
 
     def readburst32(self):
         buff = []
-        for ii in range(0, 2):
+        for ii in range(2):
             buf = sendread_packet(
                 self.pd,
                 SEQ_ADDR + b'\x17' + b'\x40\x00' + b'\x20\x01',
             )
-            for i in range(0, 17):
+            for i in range(17):
                 start = i * 1024
                 transfer = 1024
                 if i == 16:
@@ -281,7 +282,7 @@ class PmcBackend:
             self.pd,
             SEQ_ADDR + b'\x17' + b'\x40\x00' + b'\x20\x02',
         )  # readburst+start_reg+number
-        for i in range(0, 16):
+        for i in range(16):
             start = i * 1024
             transfer = 1024
             bstartreg = start.to_bytes(3, byteorder='big')
@@ -305,7 +306,7 @@ class PmcBackend:
             raise Exception('read_adc: not ready')
         self.write_reg(66, 0)
         self.write_reg(66, 0x8)
-        adc_raw = [self._read_reg(8192, 128) for i in range(0, int(num / 128))]
+        adc_raw = [self._read_reg(8192, 128) for i in range(int(num / 128))]
         buf_ = struct.unpack('>' + 'H' * num, b''.join(adc_raw))  # reorder bytes 1/2
         adc_buf = b''.join([b.to_bytes(2, byteorder='little') for b in buf_])  # 2/2
         adc_q_a = struct.unpack('<' + 'Q' * int(num / 4), adc_buf)
@@ -315,7 +316,7 @@ class PmcBackend:
         adc_q1 = adc_q_b[0::2]
 
         adc0, adc1 = [], []
-        for i in range(0, 10):
+        for i in range(10):
             adc0.append([(a >> (i * 6)) & 0b111111 for a in adc_q0])
             adc1.append([(a >> (i * 6 + 4)) & 0b111111 for a in adc_q1])
 

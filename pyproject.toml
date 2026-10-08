@@ -7,7 +7,9 @@ authors = [
     { name = "Lukas Jehna", email = "lukasjehna@gmail.com" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "libpcap>=1.11.0b29",
+]
 
 [project.scripts]
 balloon-control = "balloon_control:main"

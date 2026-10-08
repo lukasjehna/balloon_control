@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 import time
-import libpcap as pcap
 import matplotlib.pyplot as plt
 import numpy as np
-import spectrometer_backend as pmc_backend
+import balloon_control.devices.spectrometer_backend as pmc_backend
+import functools
+import operator
 
 #Test this first. The working version is on the raspberry pi.
 #sudo python3 -i src/devices/spectrometer_control.py
@@ -65,7 +66,7 @@ def spectrum_xy(data, bw=4, normalize=False, floor=1e-12):
 
 
 def adc_hist_data(adc):
-    return sum(adc, [])
+    return functools.reduce(operator.iadd, adc, [])
 
 
 def plot_spectrum(data, bw=4, fig_num=2, normalize=False):
