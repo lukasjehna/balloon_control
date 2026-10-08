@@ -8,7 +8,7 @@ import spectrometer_backend as pmc_backend
 
 pmc = None
 
-def spectrum_xy(data, bandwidth=4, normalize=False, floor=1e-12):
+def spectrum_xy(data, bw=4, normalize=False, floor=1e-12):
     spectrum_sum = np.sum(data, axis=0)
     spectrum = np.array(spectrum_sum, dtype=float)
 
@@ -22,7 +22,7 @@ def spectrum_xy(data, bandwidth=4, normalize=False, floor=1e-12):
     spectrum = spectrum / norm
     spectrum = np.maximum(spectrum, floor)
 
-    freqs = np.linspace(0, bandwidth * 1000, len(spectrum))
+    freqs = np.linspace(0, bw * 1000, len(spectrum))
     y_vals = 20 * np.log10(spectrum)
 
     return freqs, y_vals
@@ -41,8 +41,8 @@ def plot_hist(adc, nbins=32):
     plt.hist(adc_merged, nbins, range=(0, 63))
     fig.show()
 
-def plot_spectrum(data, bandwidth=4, fig_num=2, normalize=False):
-    x_vals, y_vals = spectrum_xy(data, bandwidth=bandwidth, normalize=normalize)
+def plot_spectrum(data, bw=4, fig_num=2, normalize=False):
+    x_vals, y_vals = spectrum_xy(data, bw=bw, normalize=normalize)
 
     fig = plt.figure(fig_num)
     plt.clf()
@@ -54,7 +54,7 @@ def plot_spectrum(data, bandwidth=4, fig_num=2, normalize=False):
     fig.show()
 
 
-def live_measurement(pmc_instance=None, bandwidth=4, delay=0.5, normalize=True):
+def live_measurement(pmc_instance=None, bw=4, delay=0.5, normalize=True):
     if pmc_instance is None:
         if pmc is None:
             raise RuntimeError(
@@ -76,7 +76,7 @@ def live_measurement(pmc_instance=None, bandwidth=4, delay=0.5, normalize=True):
             data, timestamps = pmc_instance.meas_spectra(1)
             x_vals, y_vals = spectrum_xy(
                 data,
-                bandwidth=bandwidth,
+                bw=bw,
                 normalize=normalize,
             )
 
