@@ -2,7 +2,7 @@
 import time
 import matplotlib.pyplot as plt
 import numpy as np
-import spectrometer_backend as pmc_backend
+import spec_backend as pmc_backend
 
 def interactive_live_measurement(pmc_instance, bw=2, delay=0.5, floor=1e-12):
     plt.ion()

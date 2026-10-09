@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 try:
-    import spectrometer_backend as pmc_backend
+    import spec_backend as pmc_backend
 except ImportError:
     import spec_backend as pmc_backend
 

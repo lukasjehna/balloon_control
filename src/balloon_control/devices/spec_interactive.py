@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.collections import LineCollection
 
-import spectrometer_backend as pmc_backend
+import spec_backend as pmc_backend
 
 
 class SpectrometerState:
