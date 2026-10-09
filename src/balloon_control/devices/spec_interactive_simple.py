@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 import time
+
 import matplotlib.pyplot as plt
 import numpy as np
-import spec_backend as pmc_backend
+
+from balloon_control.devices import spec_backend as pmc_backend
+
 
 def interactive_live_measurement(pmc_instance, bw=2, delay=0.5, floor=1e-12):
     plt.ion()
@@ -53,7 +56,7 @@ def interactive_live_measurement(pmc_instance, bw=2, delay=0.5, floor=1e-12):
 
     while True:
         try:
-            data, timestamps = pmc_instance.meas_spectra(1)
+            data, _timestamps = pmc_instance.meas_spectra(1)
             if len(data) == 0:
                 time.sleep(delay)
                 continue

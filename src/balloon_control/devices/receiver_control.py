@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-import smbus
-import math
 import argparse
-from pathlib import Path
+import math
+
+import smbus
 
 #Setting RX frequency
 # - Calculation of only the first two registers (R0, R1) [the last ones to write], other registers are not affected by frequency
@@ -40,8 +40,8 @@ def calc_f(f):
     x2 = math.floor(tmp)
 
     R01='000'
-    R02=('{:032b}'.format(int(x1))[::-1])[13:25]
-    R03=('{:032b}'.format(int(x2))[::-1])[0:12]
+    R02=(f'{int(x1):032b}'[::-1])[13:25]
+    R03=(f'{int(x2):032b}'[::-1])[0:12]
     R04='1011'
     R05='0'
     R0str=(R01+R02+R03+R04+R05)[::-1]
@@ -51,7 +51,7 @@ def calc_f(f):
 
     R11='100'
     R12='000000000000'
-    R13=('{:032b}'.format(int(x1))[::-1])[0:13]
+    R13=(f'{int(x1):032b}'[::-1])[0:13]
     R14='0'
     R15='000'
     R1str=(R11+R12+R13+R14+R15)[::-1]
