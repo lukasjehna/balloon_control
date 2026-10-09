@@ -9,10 +9,10 @@ PEP 8 naming, unified CLI, consistent CSV:
 
 import argparse
 import csv
-from datetime import datetime
-from pathlib import Path
 import math
 import time
+from datetime import datetime
+from pathlib import Path
 
 import smbus
 

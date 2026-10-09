@@ -10,11 +10,11 @@ PEP 8 naming, unified CLI, consistent CSV:
 
 import argparse
 import csv
-from pathlib import Path
-import time
 import glob
 import os
+import time
 from datetime import datetime
+from pathlib import Path
 
 BASE_DIR = "/sys/bus/w1/devices"
 DEFAULT_MEASUREMENT_INTERVAL = 13.0
