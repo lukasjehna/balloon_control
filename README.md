@@ -18,7 +18,7 @@ sudo setcap cap_net_raw+ep $(readlink -f $(uv python find))
 try uv run script.py
 sometimes python3 script.py might be needed.
 
-
+\
 # Documentation
 - systemd and service managment -> docs/systemd.md
 - Data analyis -> docs/analysis.md
