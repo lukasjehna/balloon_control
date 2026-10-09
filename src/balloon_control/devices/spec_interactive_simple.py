@@ -1,25 +1,20 @@
 #!/usr/bin/env python3
 import time
-from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 import spectrometer_backend as pmc_backend
 
-
-def interactive_live_measurement(pmc_instance: pmc_backend.PmcBackend, bw: float = 2.0, delay: float = 0.5, floor: float = 1e-12):
+def interactive_live_measurement(pmc_instance, bw=2, delay=0.5, floor=1e-12):
     plt.ion()
     fig, ax = plt.subplots()
-    (line,) = ax.plot([], [])
-
+    line, = ax.plot([], [])
+    
+    # State configuration for interactive toggles
     state = {
         'x_mode': 'frequency',  # 'frequency' (default) or 'bins'
         'y_mode': 'linear',     # 'linear' (default), 'log', or 'db'
-        'bw': bw,
-        'running': True,
+        'bw': bw
     }
-
-    accumulated_spectra = []
-    accumulated_timestamps = []
 
     def update_labels():
         if state['x_mode'] == 'frequency':
@@ -33,10 +28,10 @@ def interactive_live_measurement(pmc_instance: pmc_backend.PmcBackend, bw: float
             ax.set_ylabel("Power (Log10)")
         else:
             ax.set_ylabel("Power [dB]")
-
+            
         ax.set_title(
             f"Live Spectrum | X: {state['x_mode']} | Y: {state['y_mode']}\n"
-            "[Press 'x': toggle X | 'y': cycle Y | 'q': save & quit]"
+            "[Press 'x' to toggle X-axis, 'y' to cycle Y-axis]"
         )
         fig.canvas.draw_idle()
 
@@ -51,34 +46,29 @@ def interactive_live_measurement(pmc_instance: pmc_backend.PmcBackend, bw: float
             state['y_mode'] = modes[(curr_idx + 1) % len(modes)]
             print(f"[Control] Y-axis switched to: {state['y_mode']}")
             update_labels()
-        elif event.key == 'q':
-            print("\n[Control] Quit signal received via 'q' key.")
-            state['running'] = False
 
     fig.canvas.mpl_connect('key_press_event', on_key)
     update_labels()
     ax.grid(True)
 
-    while state['running']:
+    while True:
         try:
-            # Single-shot acquisition per refresh cycle
             data, timestamps = pmc_instance.meas_spectra(1)
             if len(data) == 0:
                 time.sleep(delay)
                 continue
 
-            accumulated_spectra.append(data[0])
-            accumulated_timestamps.append(timestamps[0])
-
             spectrum_sum = np.sum(data, axis=0)
             spectrum = np.array(spectrum_sum, dtype=float)
             spectrum = np.maximum(spectrum, floor)
 
+            # Compute X-axis values
             if state['x_mode'] == 'frequency':
                 x_vals = np.linspace(0, state['bw'] * 1000, len(spectrum))
             else:
                 x_vals = np.arange(len(spectrum))
 
+            # Compute Y-axis values based on selected scale
             if state['y_mode'] == 'linear':
                 y_vals = spectrum
             elif state['y_mode'] == 'log':
@@ -92,22 +82,14 @@ def interactive_live_measurement(pmc_instance: pmc_backend.PmcBackend, bw: float
             plt.pause(delay)
 
         except KeyboardInterrupt:
-            print("\n[Control] Interrupted by user (Ctrl+C).")
+            print("\nLive measurement stopped by user.")
             break
         except Exception as exc:
             print(f"Error during live measurement: {exc}")
             time.sleep(1)
 
-    plt.ioff()
-    plt.close(fig)
-
-    if accumulated_spectra:
-        return np.array(accumulated_spectra, dtype=object), np.array(accumulated_timestamps)
-    return np.empty((0,), dtype=object), np.empty((0,), dtype=float)
-
-
 def main():
-    dev_name = b"eth0"  # Target interface on Raspberry Pi
+    dev_name = b"eth0"  # Adjust interface name if needed (e.g., for Raspberry Pi)
 
     print(f"Initializing PmcBackend on device: {dev_name.decode()}")
     pmc = pmc_backend.PmcBackend(
@@ -118,31 +100,20 @@ def main():
     try:
         print("Connecting to FPGA...")
         pmc.connect()
-
+        
         print("Loading registers and configuring PMCC (2GHz, 500ms integration)...")
         allregs = pmc_backend.load('config/allregs.bin')
         pmc.setup_pmcc(allregs, bw='2GHz', int_time_ms=500)
-
-        print("Starting interactive live measurement.")
-        print("Focus the plot window and use 'x' (X-axis), 'y' (Y-axis), or 'q' (save & exit).")
-        spectra, timestamps = interactive_live_measurement(pmc_instance=pmc, bw=2.0)
-
-        if len(spectra) > 0:
-            timestamp_str = time.strftime("%Y%m%d-%H%M%S")
-            filename = f"live_session_{timestamp_str}.npy"
-            print(f"Persisting {len(spectra)} spectra via pmc_backend.save() -> {filename}...")
-            # pmc_backend.save() routes through _resolve_data_path() and auto-creates parent dirs
-            pmc_backend.save(spectra, filename)
-        else:
-            print("No spectra collected to save.")
+        
+        print("Starting interactive live measurement... Focus the plot window and use 'x' / 'y' keys.")
+        interactive_live_measurement(pmc_instance=pmc, bw=2)
 
     finally:
-        print("Disconnecting hardware safely...")
+        print("Disconnecting...")
         try:
             pmc.disconnect()
         except Exception:
             pass
-
 
 if __name__ == "__main__":
     main()
