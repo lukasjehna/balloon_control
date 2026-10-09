@@ -18,7 +18,7 @@ import traceback
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
-import src.devices.spectrometer_backend as pmc_backend
+import src.devices.spectrometer_backend as pmc
 import sdnotify
 CONFIG = PROJECT_ROOT / "config" / "allregs.bin"
 

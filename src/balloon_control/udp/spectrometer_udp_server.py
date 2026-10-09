@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
-import sys
 import argparse
 import json
 import os
+import shlex
 import signal
 import socketserver
 import struct
+import sys
 import threading
 import time
-import shlex
+import traceback
 from datetime import datetime
 from pathlib import Path
 from typing import Optional
-import traceback
+
 import sdnotify
 
 # ensure project root is on sys.path so "import src.devices..." works when running the script directly
@@ -21,11 +22,11 @@ sys.path.insert(0, str(PROJECT_ROOT))
 
 
 
-import src.devices.spectrometer_backend as pmc_backend
-from src.utility.verbose_utils import set_verbose, vprint
+import balloon_control.devices.spec_backend as pmc
+from balloon_control.utility.verbose_utils import set_verbose, vprint
 CONFIG = PROJECT_ROOT / "config" / "allregs.bin"
 
-REGS = pmc_backend.load(CONFIG)
+REGS = pmc.load(CONFIG)
 
 DEFAULT_HOST = "127.0.0.1"
 DEFAULT_PORT = 5005
@@ -81,14 +82,14 @@ class SpectrometerState:
         self.lock = threading.Lock()
         self.dev_name = dev_name.encode("ascii") if isinstance(dev_name, str) else dev_name
         self.window_coefficients_csv = window_coefficients_csv
-        self.pmc = pmc_backend.PmcBackend(
+        self.pmc = pmc.PmcBackend(
             self.dev_name,
             window_coefficients_csv=self.window_coefficients_csv,
         )
 
     def connect(self):
         with self.lock:
-            self.pmc = pmc_backend.PmcBackend(
+            self.pmc = pmc.PmcBackend(
                 self.dev_name,
                 window_coefficients_csv=self.window_coefficients_csv,
             )
@@ -99,7 +100,7 @@ class SpectrometerState:
         for attempt in range(5):
             try:
                 with self.lock:
-                    self.pmc = pmc_backend.PmcBackend(
+                    self.pmc = pmc.PmcBackend(
                         self.dev_name,
                         window_coefficients_csv=self.window_coefficients_csv,
                     )

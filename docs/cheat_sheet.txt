@@ -1,6 +1,6 @@
 pmc.connect() #Nach dem Start und nach dem Wechsel von GUI/Labview auf Python immer wieder den pmc.connect() Befehl ausführen.
 
-pmc.setup_pmcc(pmc_backend.load('config/allregs.bin'), bandwidth='2GHz',int_time_ms=500)  #Standard Einstellungen laden
+pmc.setup_pmcc(pmc_backend.load('config/allregs.bin'), bw='2GHz',int_time_ms=500)  #Standard Einstellungen laden
 
 pmc.readReg(0)	#Check der Verbindung. Sollte 6 ausgeben
 

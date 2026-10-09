@@ -13,7 +13,10 @@ set gyro frequeny higher.
 
 
 # analysis
-Add another plot analogus to the calibrated average hot and cold plot.The user selects a measurement folder for the tempertaure calibration. Afterwards he seelcts a folder of uncalibrated spectra. Then the calibration is applied to the uncalibrated spectra.Then the following formula is calculatd and plotted based on the calibratoin of the uncalibrated measurement. Tc is the median cold load temperature from bin 614 to 1843. Th-Tc is computed using compute_median_hot_cold_distanceTc+(Th-Tc)*(Pc-Ph_shifted)/(Ph-Ph_shifted)
+Add another plot analogus to the calibrated average hot and cold plot.
+The user selects a measurement folder for the tempertaure calibration. Afterwards he seelcts a folder of uncalibrated spectra. Then the calibration is applied to the uncalibrated spectra.
+Then the following formula is calculatd and plotted based on the calibratoin of the uncalibrated measurement. Tc is the median cold load temperature from bin 614 to 1843. Th-Tc is computed using compute_median_hot_cold_distance
+Tc+(Th-Tc)*(Pc-Ph_shifted)/(Ph-Ph_shifted)
 
 
 
@@ -28,11 +31,11 @@ Add another plot analogus to the calibrated average hot and cold plot.The user 
 ==================================================
 Fehler RaspberryPi
 ==================================================
-
+pmc
 Script muss mit sudo rechten ausgeführt werden. 
 Also entweder in bash mit cd in den Ordner. Dann my sudo python3 ausführen und
 direkt in python öffnen exec(open('pmc_backend3_Martin.py').read()).
-Oder z.B. thonny mit sudo öffnen.
+Oder z.pmcit sudo öffnen.
 
 
 Zuerst pmc_backend ausführen damit die Befehle funktionieren.
@@ -44,15 +47,15 @@ Fehler:
 Man kann connecten, aber sobald man das Spektrometer initialisiert kommt der Fehler
 """
 pmc.setupPMCC(load('allregs.bin'), bandwidth='2GHz',int_time_ms=500) 
-b"This handle hasn't been activated yet"
+b"This handle hasn't been activated yet"pmc
 Traceback (most recent call last):
-  File "<pyshell>", line 1, in <module>
+  File "<pyshell>", line 1, in <module>pmc
   File "/home/pi/Documents/PythonProjects/Pacific_MicroChip_EVAL2_PCB/python/pmc_backend_v4_Lukas.py", line 273, in setupPMCC
-    if self.readReg(0)!=6: raise Exception('setupPMCC: connection error')
+    if self.readReg(0)!=6: raise Exception('setupPMCC: connection error')pmc
   File "/home/pi/Documents/PythonProjects/Pacific_MicroChip_EVAL2_PCB/python/pmc_backend_v4_Lukas.py", line 183, in readReg
-    buf=self._readReg(reg,1)
+    buf=self._readReg(reg,1)pmc
   File "/home/pi/Documents/PythonProjects/Pacific_MicroChip_EVAL2_PCB/python/pmc_backend_v4_Lukas.py", line 177, in _readReg
-    buf=sendread_packet(self.pd,seq)
+    buf=sendread_packet(self.pd,seq)pmc
   File "/home/pi/Documents/PythonProjects/Pacific_MicroChip_EVAL2_PCB/python/pmc_backend_v4_Lukas.py", line 61, in sendread_packet
     buf=read_next(pd)
   File "/home/pi/Documents/PythonProjects/Pacific_MicroChip_EVAL2_PCB/python/pmc_backend_v4_Lukas.py", line 43, in read_next

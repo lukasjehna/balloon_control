@@ -7,12 +7,17 @@
 - `logs/` Event and debug logs
 
 # Installation
+## libpcap
+grant the CAP_NET_RAW capabilities so libpcap can access raw data stream, so you don't need sudo python3.
+sudo setcap cap_net_raw+ep $(readlink -f $(uv python find))
 
 # Quick start
 ## start a full measurement
 ./script/run_service 
-## analysis
-uv run src/balloon/analysis/noise_temperature_folder_viewer.py --thot 300 --tcold 5 --pairs-per-average 30 --spectral-bin-size 3
+## device scripts
+try uv run script.py
+sometimes python3 script.py might be needed.
+
 
 # Documentation
 - systemd and service managment -> docs/systemd.md
