@@ -127,7 +127,6 @@ class PmcBackend:
         self.ebuf = ct.create_string_buffer(pcap.PCAP_ERRBUF_SIZE)
         self.dev_name = dev_name
         self.pd = None
-        self.connect()
         self.t_acc = 500  # default
         self.wind_coefficients = load_window_coefficients(window_coefficients_csv)
         self.readout_32bit = True
