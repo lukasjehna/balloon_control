@@ -4,7 +4,7 @@ import time
 import libpcap as pcap
 import matplotlib.pyplot as plt
 import numpy as np
-import spectrometer_backend as pmc_backend
+import spec_backend as pmc_backend
 
 pmc = None
 
