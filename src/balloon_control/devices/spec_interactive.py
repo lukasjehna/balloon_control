@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 import threading
 import time
 from typing import Any
@@ -6,8 +7,11 @@ from typing import Any
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
-import spec_backend as pmc_backend
 from matplotlib.collections import LineCollection
+
+from balloon_control.devices import spec_backend as pmc_backend
+
+os.environ["QT_LOGGING_RULES"] = "qt.qpa.wayland.textinput=false"
 
 mpl.rcParams["figure.raise_window"] = False
 

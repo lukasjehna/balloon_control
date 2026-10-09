@@ -2,15 +2,12 @@
 import struct
 import time
 from pathlib import Path
-from typing import Any, Dict, List, Tuple
+from typing import Any
 
 import matplotlib.pyplot as plt
 import numpy as np
 
-try:
-    import spec_backend as pmc_backend
-except ImportError:
-    import spec_backend as pmc_backend
+from balloon_control.devices import spec_backend as pmc_backend
 
 
 def _ensure_dir(path: Path) -> None:
@@ -22,12 +19,12 @@ def _ts() -> str:
 
 
 def save_spec(
-    d: List[Any] | np.ndarray,
-    t: List[float] | np.ndarray,
+    d: list[Any] | np.ndarray,
+    t: list[float] | np.ndarray,
     out_dir: str | Path,
-    t_acc: int | float | None = None,
-    bw: str | int | float | None = None,
-) -> Dict[str, Any]:
+    t_acc: float | None = None,
+    bw: str | float | None = None,
+) -> dict[str, Any]:
     """Writes spectra and timestamps to disk matching the backend .spec binary format."""
     out_path = Path(out_dir)
     _ensure_dir(out_path)
@@ -45,8 +42,7 @@ def save_spec(
         # Pack times (floats) as big-endian doubles ('>d')
         f.write(struct.pack(">" + "d" * len(t), *t))
         # Pack raw spectrum bins as big-endian signed 32-bit integers ('>l')
-        for d_ in d:
-            f.write(struct.pack(">" + "l" * len(d_), *[int(x) for x in d_]))
+        f.writelines(struct.pack(">" + "l" * len(d_), *[int(x) for x in d_]) for d_ in d)
 
     return {
         "file": str(fn),
@@ -58,7 +54,7 @@ def save_spec(
 
 def interactive_live_measurement(
     pmc_instance: Any, bw: float = 2.0, delay: float = 0.5, floor: float = 1e-12
-) -> Tuple[List[Any], List[float]]:
+) -> tuple[list[Any], list[float]]:
     plt.ion()
     fig, ax = plt.subplots()
     (line,) = ax.plot([], [])
@@ -70,8 +66,8 @@ def interactive_live_measurement(
         "running": True,
     }
 
-    accumulated_spectra: List[Any] = []
-    accumulated_timestamps: List[float] = []
+    accumulated_spectra: list[Any] = []
+    accumulated_timestamps: list[float] = []
 
     def update_labels() -> None:
         if state["x_mode"] == "frequency":
