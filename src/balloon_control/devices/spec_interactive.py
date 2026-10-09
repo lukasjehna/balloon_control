@@ -6,7 +6,7 @@ from typing import Any
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
-import spec_backend as pmc_backend
+from balloon_control.devices import spec_backend as pmc_backend
 from matplotlib.collections import LineCollection
 
 mpl.rcParams["figure.raise_window"] = False
