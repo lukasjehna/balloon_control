@@ -20,6 +20,26 @@ dependencies = [
 [project.scripts]
 balloon-control = "balloon_control:main"
 
+# Device controls & sensors
+chopper-control         = "balloon_control.devices.chopper_control:main"
+receiver-control        = "balloon_control.devices.receiver_control:main"
+spec-control            = "balloon_control.devices.spec_control:main"
+spec-interactive        = "balloon_control.devices.spec_interactive:main"
+spec-interactive-save   = "balloon_control.devices.spec_interactive_save:main"
+spec-interactive-simple = "balloon_control.devices.spec_interactive_simple:main"
+gyro-sensor             = "balloon_control.devices.gyro_sensor:main"
+pressure-sensor         = "balloon_control.devices.pressure_sensor:main"
+temperature-sensor      = "balloon_control.devices.temperature_sensor:main"
+telemetry-sensor        = "balloon_control.devices.telemetry_sensor:main"
+led-simple              = "balloon_control.devices.led_simple:main"
+
+
 [build-system]
 requires = ["uv_build>=0.12.5,<0.13.0"]
 build-backend = "uv_build"
+
+[tool.uv]
+environments = [
+    "sys_platform == 'linux' and platform_machine == 'x86_64'",
+    "sys_platform == 'linux' and platform_machine == 'aarch64'",
+]
