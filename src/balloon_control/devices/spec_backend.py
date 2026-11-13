@@ -80,7 +80,6 @@ def load_window_coefficients(filename: str | Path) -> list[int]:
 
 
 def read_next(pd):
-    global _deadtime
     perr = pcap.geterr(pd)
     if perr != b'':
         print(perr)
@@ -357,10 +356,8 @@ class PmcBackend:
         time.sleep(10e-3)
 
     def set_window_coefficients(self):
-        global t0, t1, t2
         if len(self.wind_coefficients) != EXPECTED_COEFF_COUNT:
             raise Exception(f'Wrong number of coefficients, needs to be {EXPECTED_COEFF_COUNT}')
-        t0 = time.time()
         for c in self.wind_coefficients:
             self.write_reg(20, c)
             self.write_reg(22, 0b100)
@@ -469,7 +466,7 @@ class PmcBackend:
     def set_32bit(self):
         self.write_reg_bits(5, 6, 0b11, 0b11)
 
-    def set_16bit(self):
+    def script_16bit(self):
         self.write_reg_bits(5, 6, 0b10, 0b11)
 
     def clear_dsp(self):
