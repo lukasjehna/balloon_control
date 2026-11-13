@@ -61,7 +61,7 @@ def interactive_live_measurement(
 
     state = {
         "x_mode": "frequency",  # 'frequency' or 'bins'
-        "y_mode": "linear",     # 'linear', 'log', or 'db'
+        "y_mode": "linear",     # 'linear', 'log', or 'dBm'
         "bw": bw,
         "running": True,
     }
@@ -80,7 +80,7 @@ def interactive_live_measurement(
         elif state["y_mode"] == "log":
             ax.set_ylabel("Power (Log10)")
         else:
-            ax.set_ylabel("Power [dB]")
+            ax.set_ylabel("Power [dBm]")
 
         ax.set_title(
             f"Live Spectrum | X: {state['x_mode']} | Y: {state['y_mode']}\n"
@@ -94,7 +94,7 @@ def interactive_live_measurement(
             print(f"[Control] X-axis switched to: {state['x_mode']}")
             update_labels()
         elif event.key == "y":
-            modes = ["linear", "log", "db"]
+            modes = ["linear", "log", "dBm"]
             curr_idx = modes.index(state["y_mode"])
             state["y_mode"] = modes[(curr_idx + 1) % len(modes)]
             print(f"[Control] Y-axis switched to: {state['y_mode']}")
@@ -121,8 +121,8 @@ def interactive_live_measurement(
             accumulated_spectra.append(data[0])
 
             spectrum_sum = np.sum(data, axis=0)
-            spectrum = np.array(spectrum_sum, dtype=float)
-            spectrum = np.maximum(spectrum, floor)
+            amplitude = np.array(spectrum_sum, dtype=float)
+            spectrum = np.maximum(amplitude ** 2, floor)
 
             if state["x_mode"] == "frequency":
                 x_vals = np.linspace(0, state["bw"] * 1000, len(spectrum))
@@ -134,7 +134,7 @@ def interactive_live_measurement(
             elif state["y_mode"] == "log":
                 y_vals = np.log10(spectrum)
             else:
-                y_vals = 20 * np.log10(spectrum)
+                y_vals = 10 * np.log10(spectrum)
 
             line.set_data(x_vals, y_vals)
             ax.relim()

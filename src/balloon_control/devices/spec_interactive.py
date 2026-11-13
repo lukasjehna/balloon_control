@@ -41,8 +41,8 @@ def acquisition_worker(
                 continue
 
             spectrum_sum = np.sum(data, axis=0)
-            spectrum = np.array(spectrum_sum, dtype=float)
-            spectrum = np.maximum(spectrum, floor)
+            amplitude = np.array(spectrum_sum, dtype=float)
+            spectrum = np.maximum(amplitude ** 2, floor)
 
             with state.lock:
                 # Discretization bounds check: reset buffers if spectrometer bin count changes
@@ -98,7 +98,7 @@ def interactive_live_measurement(
         elif state.y_mode == 'log':
             ax.set_ylabel("Power (Log10)")
         else:
-            ax.set_ylabel("Power [dB]")
+            ax.set_ylabel("Power [dBm]")
             
         ax.set_title(
             f"x: {state.x_mode} | y: {state.y_mode} | d: {state.display_mode}\n"
@@ -118,7 +118,7 @@ def interactive_live_measurement(
                 state.x_mode = 'bins' if state.x_mode == 'frequency' else 'frequency'
                 update_labels()
             elif event.key == 'y':
-                modes = ['linear', 'log', 'db']
+                modes = ['linear', 'log', 'dBm']
                 curr_idx = modes.index(state.y_mode)
                 state.y_mode = modes[(curr_idx + 1) % len(modes)]
                 update_labels()
@@ -153,7 +153,7 @@ def interactive_live_measurement(
             return y_data
         elif state.y_mode == 'log':
             return np.log10(y_data)
-        return 20 * np.log10(y_data)
+        return 10 * np.log10(y_data)
 
     while state.running:
         try:

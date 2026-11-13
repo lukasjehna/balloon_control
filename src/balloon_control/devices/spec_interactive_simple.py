@@ -15,7 +15,7 @@ def interactive_live_measurement(pmc_instance, bw=2, delay=0.5, floor=1e-12):
     # State configuration for interactive toggles
     state = {
         'x_mode': 'frequency',  # 'frequency' (default) or 'bins'
-        'y_mode': 'linear',     # 'linear' (default), 'log', or 'db'
+        'y_mode': 'linear',     # 'linear' (default), 'log', or 'dBm'
         'bw': bw
     }
 
@@ -30,7 +30,7 @@ def interactive_live_measurement(pmc_instance, bw=2, delay=0.5, floor=1e-12):
         elif state['y_mode'] == 'log':
             ax.set_ylabel("Power (Log10)")
         else:
-            ax.set_ylabel("Power [dB]")
+            ax.set_ylabel("Power [dBm]")
             
         ax.set_title(
             f"Live Spectrum | X: {state['x_mode']} | Y: {state['y_mode']}\n"
@@ -44,7 +44,7 @@ def interactive_live_measurement(pmc_instance, bw=2, delay=0.5, floor=1e-12):
             print(f"[Control] X-axis switched to: {state['x_mode']}")
             update_labels()
         elif event.key == 'y':
-            modes = ['linear', 'log', 'db']
+            modes = ['linear', 'log', 'dBm']
             curr_idx = modes.index(state['y_mode'])
             state['y_mode'] = modes[(curr_idx + 1) % len(modes)]
             print(f"[Control] Y-axis switched to: {state['y_mode']}")
@@ -62,8 +62,8 @@ def interactive_live_measurement(pmc_instance, bw=2, delay=0.5, floor=1e-12):
                 continue
 
             spectrum_sum = np.sum(data, axis=0)
-            spectrum = np.array(spectrum_sum, dtype=float)
-            spectrum = np.maximum(spectrum, floor)
+            amplitude = np.array(spectrum_sum, dtype=float)
+            spectrum = np.maximum(amplitude ** 2, floor)
 
             # Compute X-axis values
             if state['x_mode'] == 'frequency':
@@ -76,8 +76,8 @@ def interactive_live_measurement(pmc_instance, bw=2, delay=0.5, floor=1e-12):
                 y_vals = spectrum
             elif state['y_mode'] == 'log':
                 y_vals = np.log10(spectrum)
-            else:  # 'db'
-                y_vals = 20 * np.log10(spectrum)
+            else:  # 'dBm'
+                y_vals = 10 * np.log10(spectrum)
 
             line.set_data(x_vals, y_vals)
             ax.relim()
