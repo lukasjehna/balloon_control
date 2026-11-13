@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+import functools
+import operator
 import time
 
 import libpcap as pcap
@@ -28,7 +30,7 @@ def spectrum_xy(data, bw=4, normalize=False, floor=1e-12):
     return freqs, y_vals
 
 def plot_adc(adc, *args):
-    indices = range(0, len(adc[0][:]))
+    indices = range(len(adc[0][:]))
     fig = plt.figure(1)
     for channel in adc:
         plt.plot(indices, channel, *args)
@@ -37,7 +39,7 @@ def plot_adc(adc, *args):
 
 def plot_hist(adc, nbins=32):
     fig = plt.figure()
-    adc_merged = sum(adc, [])  # unnest
+    adc_merged = functools.reduce(operator.iadd, adc, [])  # unnest
     plt.hist(adc_merged, nbins, range=(0, 63))
     fig.show()
 
@@ -64,7 +66,7 @@ def live_measurement(pmc_instance=None, bw=4, delay=0.5, normalize=True):
 
     plt.ion()
 
-    fig, ax = plt.subplots()
+    _fig, ax = plt.subplots()
     line, = ax.plot([], [])
     ax.set_xlabel("Frequency [MHz]")
     ax.set_ylabel("Power [dB]")
