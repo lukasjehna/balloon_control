@@ -7,20 +7,19 @@ authors = [
     { name = "Lukas Jehna", email = "lukasjehna@gmail.com" }
 ]
 requires-python = ">=3.13"
+
 dependencies = [
     "gpiozero>=2.0.1.post3",
     "libpcap>=1.11.0b29",
+    # Low-level hardware drivers: install only on Raspberry Pi (ARM)
+    "pigpio>=1.78; platform_machine in 'aarch64 armv7l'",
+    "rpi-lgpio>=0.6; platform_machine in 'aarch64 armv7l'",
+    "smbus>=1.1.post2; platform_machine in 'aarch64 armv7l'",
     "matplotlib>=3.11.2",
-    "pigpio>=1.78",
-    "pyside6>=6.12.0",
-    "rpi-lgpio>=0.6",
-    "smbus>=1.1.post2",
+    "pyside6>=6.12.0"
 ]
 
 [project.scripts]
-balloon-control = "balloon_control:main"
-
-# Device controls & sensors
 chopper-control         = "balloon_control.devices.chopper_control:main"
 receiver-control        = "balloon_control.devices.receiver_control:main"
 spec-control            = "balloon_control.devices.spec_control:main"

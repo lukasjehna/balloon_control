@@ -22,6 +22,8 @@ BANDWIDTH = {'8GHz': 0b11, '4GHz': 0b10, '2GHz': 0b01, '1GHz': 0b00}
 TIME_DIVIDER = {'8GHz': 0.5, '4GHz': 1, '2GHz': 2, '1GHz': 4}
 PRINT_ALL = False
 
+EXPECTED_COEFF_COUNT = 513
+
 _i_debug = 0
 _dt_debug = [-1] * 256
 
@@ -41,33 +43,39 @@ def dt(timestamps):
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 DATA_DIR = PROJECT_ROOT / "data"
 
-#remove if it causes trouble.
-def _resolve_data_path(filename):
+
+def _resolve_data_path(filename: str | Path) -> Path:
     path = Path(filename)
     if path.is_absolute():
         return path
-    # prefer project-level config/ (common layout)
+    # Prefer project-level paths (e.g. config/...)
     candidate = PROJECT_ROOT / path
     if candidate.exists():
         return candidate
-    # fallback to data/ for bundled test data
-    return DATA_DIR / path
+    # Fallback to data/ for bundled test data
+    data_candidate = DATA_DIR / path
+    if data_candidate.exists():
+        return data_candidate
+    # Default to primary project-root target so FileNotFoundError reports the expected path
+    return candidate
 
-#def _resolve_data_path(filename):
-#    path = Path(filename)
-#    return path if path.is_absolute() else DATA_DIR / path
 
-
-def load(filename):
+def load(filename: str | Path) -> np.ndarray:
     path = _resolve_data_path(filename)
     with open(path, 'rb') as f:
         var = np.load(f)
     return var
 
 
-def load_window_coefficients(filename):
-    with open(filename, 'r') as f:
-        coefficients = [int(row) for row in f]
+def load_window_coefficients(filename: str | Path) -> list[int]:
+    path = _resolve_data_path(filename)
+    with open(path, 'r', encoding='utf-8') as f:
+        coefficients = [int(row) for row in f if row.strip()]
+    if len(coefficients) != EXPECTED_COEFF_COUNT:
+        raise ValueError(
+            f"Expected {EXPECTED_COEFF_COUNT} window coefficients in '{path}', "
+            f"got {len(coefficients)}"
+        )
     return coefficients
 
 
@@ -105,7 +113,7 @@ def sendread_packet(pd, seq):
     return rbuf
 
 
-def save(var, filename):
+def save(var, filename: str | Path) -> None:
     path = _resolve_data_path(filename)
     path.parent.mkdir(parents=True, exist_ok=True)
     with open(path, 'wb') as f:
@@ -123,12 +131,25 @@ def unpack16(buf_list, offset=16):
 
 
 class PmcBackend:
-    def __init__(self, dev_name, window_coefficients_csv):
+    def __init__(
+        self,
+        dev_name: bytes,
+        window_coefficients_csv: str | Path | None = "config/wind_coeff_hamm.csv",
+    ) -> None:
         self.ebuf = ct.create_string_buffer(pcap.PCAP_ERRBUF_SIZE)
         self.dev_name = dev_name
         self.pd = None
         self.t_acc = 500  # default
-        self.wind_coefficients = load_window_coefficients(window_coefficients_csv)
+        if window_coefficients_csv is None:
+            self.wind_coefficients: list[int] = []
+        else:
+            try:
+                self.wind_coefficients = load_window_coefficients(window_coefficients_csv)
+            except (FileNotFoundError, ValueError) as exc:
+                raise RuntimeError(
+                    f"Failed to load window coefficients from '{window_coefficients_csv}' "
+                    f"(project root: {PROJECT_ROOT})"
+                ) from exc
         self.readout_32bit = True
 
     def calib_gain(self):
@@ -337,8 +358,8 @@ class PmcBackend:
 
     def set_window_coefficients(self):
         global t0, t1, t2
-        if len(self.wind_coefficients) != 513:
-            raise Exception('Wrong number of coefficients, needs to be 513')
+        if len(self.wind_coefficients) != EXPECTED_COEFF_COUNT:
+            raise Exception(f'Wrong number of coefficients, needs to be {EXPECTED_COEFF_COUNT}')
         t0 = time.time()
         for c in self.wind_coefficients:
             self.write_reg(20, c)
@@ -479,5 +500,3 @@ class PmcBackend:
 
     def vga_peak(self, val=0):
         self.write_reg_bits(265, 0, val, 0b1111)  # lowpass thing
-
-
